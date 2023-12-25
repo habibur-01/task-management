@@ -1,0 +1,63 @@
+[
+    {
+      "title": "E-commerce Platform Upgrade",
+      "description": "Upgrade the existing e-commerce platform with new features and a responsive design.",
+      "deadline": "2023-04-15",
+      "Priorities": "Low"
+    },
+    {
+      "title": "Portfolio Website Development",
+      "description": "Create a personal portfolio website showcasing skills, projects, and achievements.",
+      "deadline": "2023-03-10",
+      "Priorities": "High"
+    },
+    {
+      "title": "Bug Fixes and Optimization",
+      "description": "Address and fix bugs, and optimize the performance of the current web application.",
+      "deadline": "2023-03-31",
+      "Priorities": "Moderate"
+    },
+    {
+      "title": "Blog Platform Implementation",
+      "description": "Develop a blog platform with user authentication, commenting, and article management features.",
+      "deadline": "2023-05-01",
+      "Priorities": "Moderate"
+    },
+    {
+      "title": "Mobile App Landing Page",
+      "description": "Design and develop a landing page for a new mobile application launch.",
+      "deadline": "2023-04-05",
+      "Priorities": "Low"
+    },
+    {
+      "title": "Client Portal Integration",
+      "description": "Integrate a secure client portal for users to access personalized information and services.",
+      "deadline": "2023-06-15",
+      "Priorities": "Moderate"
+    },
+    {
+      "title": "Interactive Dashboard",
+      "description": "Build an interactive dashboard to visualize and analyze data for better decision-making.",
+      "deadline": "2023-05-20",
+      "Priorities": "High"
+    },
+    {
+      "title": "Social Media Integration",
+      "description": "Integrate social media sharing and authentication features into the existing website.",
+      "deadline": "2023-04-30",
+      "Priorities": "Low"
+    },
+    {
+      "title": "Online Learning Platform",
+      "description": "Develop an online learning platform with course management and user progress tracking.",
+      "deadline": "2023-07-01",
+      "Priorities": "High"
+    },
+    {
+      "title": "Website Security Audit",
+      "description": "Conduct a thorough security audit and implement necessary measures to enhance website security.",
+      "deadline": "2023-03-15",
+      "Priorities": "Low"
+    }
+  ]
+  

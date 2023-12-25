@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import  { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { updateProfile } from 'firebase/auth';
 import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
@@ -33,17 +33,32 @@ const Register = () => {
                 console.log(user)
                 updateProfile(user, {
                     displayName: name,
-                    
+
                 })
-                Swal.fire({
-                    position: "center",
-                    icon: "success",
-                    title: "Registration Successfull",
-                    showConfirmButton: false,
-                    timer: 1500
-                  });
-                
-                // ...
+
+            //     fetch(' http://localhost:3000/user', {
+            //         method: 'POST',
+            //         headers: {
+            //             'content-type': 'application/json'
+            //         },
+            //         body: JSON.stringify(userInfo)
+            //     })
+            //         .then(res => res.json())
+            //         .then(data => {
+            //             console.log(data)
+            //             if (data.insertedId) {
+            //                 Swal.fire({
+            //                     position: "center",
+            //                     icon: "success",
+            //                     title: "Registration Successfull",
+            //                     showConfirmButton: false,
+            //                     timer: 1500
+            //                 });
+            //             }
+            //         })
+
+
+            //     // ...
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -54,7 +69,7 @@ const Register = () => {
                     title: errorMessage,
                     showConfirmButton: false,
                     timer: 1500
-                  });
+                });
                 // ..
             });
 
@@ -62,7 +77,7 @@ const Register = () => {
 
     return (
         <div>
-           
+
             <div className='flex justify-center items-center h-[700px]'>
 
 
@@ -91,7 +106,7 @@ const Register = () => {
                             <button className="btn btn-primary">Register</button>
                         </div>
                         <label className="label">
-                            <a href="#" className="label-text-alt link link-hover">Already have an account? Please <Link to={'/login'}><span className='text-indigo-700'>Login</span></Link></a>
+                            <p href="#" className="label-text-alt link link-hover">Already have an account? Please <Link to={'/login'}><span className='text-indigo-700'>Login</span></Link></p>
                         </label>
                     </form>
                 </div>

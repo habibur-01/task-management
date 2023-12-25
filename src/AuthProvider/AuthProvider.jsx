@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from 'react';
+import  { createContext, useEffect, useState } from 'react';
 import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signInWithEmailAndPassword, signOut } from "firebase/auth";
 // import useAxiosPublic from '../Pages/hooks/useAxiosPublic';
 import auth from '../Firebase/firebase.config';
