@@ -7,15 +7,15 @@ const DaisyNav = () => {
     const { user, userSignOut } = useContext(AuthContext)
     console.log(user)
 
-     const handleLogOut =()=> {
+    const handleLogOut = () => {
         userSignOut()
-        .then(result=>{
-            console.log(result.user)
-        })
-        .catch(error => {
-            console.error(error.message)
-        })
-     }
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.error(error.message)
+            })
+    }
 
 
     return (
@@ -28,9 +28,14 @@ const DaisyNav = () => {
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 gap-6">
                             <li><NavLink to={'/'}>Home</NavLink></li>
-                            <li className={`${user?'hidden':'visible'}`}> <NavLink to={'/taskmangement'}>Task Management</NavLink></li>
+                            <li className={`${user ? 'hidden' : 'visible'}`}> <NavLink to={'/taskmangement'}>Task Management</NavLink></li>
                             <li><NavLink to={'/register'}>Registration</NavLink></li>
-                            <li><NavLink to={'/login'}>Login</NavLink></li>
+                            <li>
+                                {
+                                    user ? <span onClick={handleLogOut}>Logout</span> : <NavLink to={'/login'}>Login</NavLink>
+
+                                }
+                            </li>
                         </ul>
                     </div>
                     <a className="btn btn-ghost text-xl">DO-TASK</a>
@@ -38,12 +43,12 @@ const DaisyNav = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-4">
                         <li><NavLink to={'/'}>Home</NavLink></li>
-                        
-                        <li className={`${user?'visible':'hidden'}`}> <NavLink to={'/taskmangement'}>Task Management</NavLink></li>
+
+                        <li className={`${user ? 'visible' : 'hidden'}`}> <NavLink to={'/taskmangement'}>Task Management</NavLink></li>
                         <li><NavLink to={'/register'}>Registration</NavLink></li>
                         <li>
                             {
-                                user ? <p onClick={handleLogOut}>Logout</p>: <NavLink to={'/login'}>Login</NavLink>
+                                user ? <span onClick={handleLogOut}>Logout</span> : <NavLink to={'/login'}>Login</NavLink>
 
                             }
                         </li>

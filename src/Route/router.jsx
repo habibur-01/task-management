@@ -10,7 +10,8 @@ import AddTask from "../Pages/TaskManagement/AddTask/AddTask";
 import CompleteTask from "../Pages/TaskManagement/CompleteTask/CompleteTask";
 import ToDoTask from "../Pages/TaskManagement/ToDoTask/ToDoTask";
 import ContinueTask from "../Pages/TaskManagement/ContinueTask/ContinueTask";
-import TaskMange from "../Pages/TaskManagement/TaskManage/TaskMange";
+import TaskMange from "../Pages/TaskManagement/TaskManage/TaskManage";
+// import TaskManagementIndex from "../Pages/TaskManagement";
 
 const router = createBrowserRouter([
   {
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/taskmangement",
-    element: <TaskManagement />,
+    element:<TaskManagement/>,
     children: [
       {
         path: "/taskmangement/addtask",
@@ -59,7 +60,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/taskmangement/taskmanage",
-        element: <TaskMange/>
+        element: <TaskMange/>,
+        
       },
     ]
   },
